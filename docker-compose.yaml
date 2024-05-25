@@ -1,0 +1,11 @@
+version: '3'
+services:
+  flask-app:
+    image: flask_image:tag  # Utiliser l'image Docker locale pour Flask
+    ports:
+      - "5000:5000"
+  
+  fastapi-app:
+    image: fastapi-app:latest  # Utiliser l'image Docker locale pour FastAPI
+    ports:
+      - "8000:8000"
