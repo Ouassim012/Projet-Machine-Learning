@@ -6,8 +6,36 @@ from fastapi import FastAPI, File, UploadFile
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.svm import SVC
+from pymongo import MongoClient
+from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi import HTTPException
 
 app = FastAPI()
+origins = [
+    "http://localhost.tiangolo.com",
+    "https://localhost.tiangolo.com",
+    "http://localhost",
+    "http://localhost:4200",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+client = MongoClient("mongodb://localhost:27017/")
+db = client["Projet-ML"]
+collection = db["Auth"]
+class user(BaseModel):
+    firstName:str
+    lastName:str
+    email:str
+    password:str
+class User(BaseModel):
+    email:str
+    password:str
 
 # Load the pre-trained SVM model, scaler, and label encoder
 with open('classifier-SVM.pkl', 'rb') as f:
@@ -66,10 +94,28 @@ async def upload_file(file: UploadFile = File(...)):
 
     return {"probabilities": percentage_probabilities}
 
-
-
+@app.post("/users/")
+async def create_user(user_data: user):
+    try:
+        user_dict = user_data.dict()  # Convert Pydantic model to dictionary
+        print("Received data:", user_dict)  # Print the received data
+        collection.insert_one(user_dict)
+        return {"message": "yes"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
     #return {"predicted_class": predicted_class}
    # return {"probabilities": probability_dict}
+@app.post("/users/login/")
+async def login_user(user: User):
+    try:
+        print("Received data:", user.dict())
+        user_record = collection.find_one({"email": user.email, "password": user.password})
+        if user_record:
+            return {"message": "yes"}
+        else:
+            return {"message": "no"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
 
 
 if __name__ == "__main__":
