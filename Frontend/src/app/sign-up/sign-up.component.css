@@ -17,11 +17,11 @@ main nav img{
 main .signup{
   border-radius: 10px;
   background-color: white;
-  height: 80%;
+  height: 85%;
   width: 33%;
   position: absolute;
   margin-left: -50vw;
-  margin-top: 100px;
+  margin-top: 60px;
 
 }
 .signup h1{
@@ -48,7 +48,8 @@ input::placeholder {
   box-shadow: 0px 4px 30px -7px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 4px 30px -7px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 4px 30px -7px rgba(0,0,0,0.75);
-border-radius: 10px;
+  border-radius: 10px;
+
 }
 #back{
   border-radius: 55% 45% 56% 44% / 55% 38% 62% 45%  ;
@@ -63,6 +64,7 @@ border-radius: 10px;
   /* Rendre le texte transparent */
   -webkit-background-clip: text;
   background-clip: text;
+  
   /* Définir la couleur de remplissage du texte */
   -webkit-text-fill-color: transparent;
   font-size: 22px;
@@ -96,7 +98,7 @@ border-radius: 10px;
   }
 }
 
-.carousel-item {
+.carousel-itemm {
   min-width: 100%;
 }
 
@@ -128,7 +130,7 @@ border-radius: 10px;
 background-color: #CF1512;
 }
 .ism{
-  width: 17px;
+  width: 15px;
   margin-left: 170px;
   position:absolute;
 }
@@ -155,7 +157,7 @@ background-color: #CF1512;
   animation-delay: 2s; /* Add a 2-second delay before the animation starts */
 }
 
-.carousel-item {
+.carousel-itemm {
   min-width: 25%; /* Each item takes up 1/4th of the total width */
 }
 
