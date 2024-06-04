@@ -21,6 +21,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "bootstrap": "^5.3.3",
     "flowbite": "^2.3.0",
+    "ng-angular-popup": "^0.5.2",
     "ng-mat-carousel": "^0.11.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

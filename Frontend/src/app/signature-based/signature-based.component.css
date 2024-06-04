@@ -1,5 +1,4 @@
-
-/* 
+/*
 
 TemplateMo 562 Space Dynamic
 
@@ -18,19 +17,19 @@ Table of contents
 
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -133,10 +132,10 @@ img {
   overflow: hidden;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 
 body {
@@ -231,10 +230,10 @@ body {
   letter-spacing: 0.25px;
 }
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -318,7 +317,7 @@ header
   background-clip: text;
   /* Définir la couleur de remplissage du texte */
   -webkit-text-fill-color: transparent;
-   
+
 }
 
 .background-header .main-nav .logo h4 {
@@ -734,10 +733,10 @@ header
 }
 
 
-/* 
+/*
 ---------------------------------------------
 preloader
---------------------------------------------- 
+---------------------------------------------
 */
 
 .js-preloader {
@@ -836,11 +835,11 @@ preloader
 
 
 
-/* 
+/*
 
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .main-banner {
@@ -915,7 +914,7 @@ Banner Style
 .main-banner .left-content form button {
   position: absolute;
   left: 10px;
- 
+
   display: inline-block;
   background-color:#03a4ed;
   font-size: 15px;
@@ -954,22 +953,22 @@ Banner Style
 .main-banner .left-content{
   width: 600px ;
   height: 400px;
-  
+
 }
 .main-banner .right-content{
 
   width:400px;
-  
-  
+
+
 }
 
 
 
-/* 
+/*
 
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 
@@ -1003,54 +1002,91 @@ Banner Style
   -webkit-animation-name: slideInDown;
           animation-name: slideInDown;
 }
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .container {
+.class1 {
+    border: 2px dashed gray;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: none;
+}
+
+.center {
     text-align: center;
-  }
-  
-  .upload-container {
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .upload-container.dragging {
-    border-color: #000;
-    background-color: #f0f0f0;
-  }
-  
-  .border-container {
-    padding: 20px;
-  }
-  
-  .icons {
-    color: #ccc;
-  }
-  
-  #file-upload {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-  }
-  .image-container {
+}
+
+#top {
+    margin-top: 20px;
+}
+
+.btn-container {
+    background: #fff;
+    border-radius: 5px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
-  }
-  
-  .image-container img {
-    max-width: 100px; /* Adjust the size of the image */
-    height: auto;
-  }
-  
+}
 
+.imgupload {
+    color: #1E2832;
+    padding-top: 40px;
+    font-size: 7em;
+}
 
+#namefile {
+    color: black;
+}
+
+h4 > strong {
+    color: #ff3f3f;
+}
+
+.btn-primary {
+    border-color: #ff3f3f !important;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ff3f3f !important;
+    border-color: #ff3f3f !important;
+}
+
+.imgupload.ok {
+    display: none;
+    color: green;
+}
+
+.imgupload.stop {
+    display: none;
+    color: red;
+}
+
+#fileup {
+    opacity: 0;
+    width: 200px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    height: 50px;
+}
+
+#submitbtn, #fakebtn {
+    padding: 5px 50px;
+    margin-top: 20px;
+}
+
+#submitbtn {
+    display: none;
+}
+
+#sign {
+    color: #1E2832;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    text-shadow: 0px 0px 0px #1E2832;
+    transition: all 0.3s;
+}
+
+#sign:hover {
+    color: #1E2832;
+    text-shadow: 0px 0px 5px #1E2832;
+}

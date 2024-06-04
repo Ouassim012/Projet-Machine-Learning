@@ -13,6 +13,7 @@ import { LandingComponent } from './landing/landing.component';
 import { SignatureBasedComponent } from './signature-based/signature-based.component';
 import { ImageBasedComponent } from './image-based/image-based.component';
 import { MasterComponent } from './master/master.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -25,14 +26,16 @@ import { MasterComponent } from './master/master.component';
     SignatureBasedComponent,
     ImageBasedComponent,
     MasterComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgToastModule
+
 
   ],
   providers: [],

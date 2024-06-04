@@ -76,6 +76,8 @@ login() {
         if (response.message === 'yes') {
           // User is authenticated, navigate to the dashboard or home page
           console.log("good")
+          this.loginForm.reset()
+          this.route.navigate(['card-page'])
         } else {
           // Authentication failed, display an error message
           alert('Login failed. Please check your credentials and try again.');

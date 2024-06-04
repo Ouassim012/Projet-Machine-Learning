@@ -65,7 +65,7 @@ export class ImageBasedComponent {
       this.fileUploadService.uploadFile(file).subscribe(
         (response: any) => {
           console.log('Response:', response);
-          this.malwareResults = response.probabilities; // Mise à jour de malwareResults avec les résultats
+          this.malwareResults = this.sortMalwareResults(response.probabilities); // Update and sort malwareResults
         },
         (error) => {
           console.error('Error:', error);
@@ -74,5 +74,9 @@ export class ImageBasedComponent {
       );
     }
   }
-
+  sortMalwareResults(results: { [key: string]: number }): { key: string, value: number }[] {
+    return Object.entries(results)
+      .map(([key, value]) => ({ key, value }))
+      .sort((a, b) => b.value - a.value);
+  }
 }

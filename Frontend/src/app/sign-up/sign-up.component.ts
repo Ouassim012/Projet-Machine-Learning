@@ -3,6 +3,8 @@ import { initFlowbite } from 'flowbite';
 import { trigger, style, animate, transition,keyframes } from '@angular/animations';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SignupService } from "../services/signup.service";
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-sign-up',
@@ -29,7 +31,7 @@ export class SignUpComponent implements AfterViewInit ,OnInit{
 
   signupForm: FormGroup;
 
-  constructor(private fb: FormBuilder,private SignupService:SignupService) {
+  constructor(private route:Router,private fb: FormBuilder,private SignupService:SignupService) {
     this.signupForm = this.fb.group({
       firstName: [''],
       lastName: [''],
@@ -44,6 +46,8 @@ export class SignUpComponent implements AfterViewInit ,OnInit{
       response => {
         console.log('User created successfully', response);
         this.signupForm.reset();
+        this.route.navigate(["section"]);
+
       },
       error => {
         console.error('Error creating user', error);

@@ -17,7 +17,7 @@ main nav img{
 main .signup{
   border-radius: 10px;
   background-color: white;
-  height: 85%;
+  height: 79%;
   width: 33%;
   position: absolute;
   margin-left: -50vw;
@@ -64,7 +64,7 @@ input::placeholder {
   /* Rendre le texte transparent */
   -webkit-background-clip: text;
   background-clip: text;
-  
+
   /* Définir la couleur de remplissage du texte */
   -webkit-text-fill-color: transparent;
   font-size: 22px;
@@ -141,7 +141,7 @@ background-color: #CF1512;
 }
 .ism3{
   width: 17px;
-  margin-left: 178px;
+  margin-left: 168px;
   position:absolute;
 }
 .carousel-container {

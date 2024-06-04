@@ -13,8 +13,7 @@ from fastapi import HTTPException
 
 app = FastAPI()
 origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
+    "http://localhost:53608",
     "http://localhost",
     "http://localhost:4200",
 ]
@@ -38,13 +37,13 @@ class User(BaseModel):
     password:str
 
 # Load the pre-trained SVM model, scaler, and label encoder
-with open('Fast-API/classifier-SVM.pkl', 'rb') as f:
+with open('classifier-SVM.pkl', 'rb') as f:
     model = pickle.load(f)
 
-with open('Fast-API/scaler.pkl', 'rb') as f:
+with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
-with open('Fast-API/label_encoder.pkl', 'rb') as f:
+with open('label_encoder.pkl', 'rb') as f:
     label_encoder = pickle.load(f)
 
 labels = ['Adposhel', 'Agent', 'Allaple', 'Alueron.gen!J', 'Amonetize', 'Androm', 'Autorun', 'BrowseFox', 

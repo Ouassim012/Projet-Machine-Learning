@@ -1,4 +1,4 @@
-/* 
+/*
 
 TemplateMo 562 Space Dynamic
 
@@ -17,19 +17,23 @@ Table of contents
 
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
+tr{
+  max-height: 100px; /* Ensure this matches the container height */
+  overflow-y: auto;
+}
 
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -132,10 +136,10 @@ img {
   overflow: hidden;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 
 body {
@@ -230,10 +234,10 @@ body {
   letter-spacing: 0.25px;
 }
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -317,7 +321,7 @@ header
   background-clip: text;
   /* Définir la couleur de remplissage du texte */
   -webkit-text-fill-color: transparent;
-   
+
 }
 
 .background-header .main-nav .logo h4 {
@@ -733,10 +737,10 @@ header
 }
 
 
-/* 
+/*
 ---------------------------------------------
 preloader
---------------------------------------------- 
+---------------------------------------------
 */
 
 .js-preloader {
@@ -835,11 +839,11 @@ preloader
 
 
 
-/* 
+/*
 
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .main-banner {
@@ -914,7 +918,7 @@ Banner Style
 .main-banner .left-content form button {
   position: absolute;
   left: 10px;
- 
+
   display: inline-block;
   background-color:#03a4ed;
   font-size: 15px;
@@ -953,22 +957,22 @@ Banner Style
 .main-banner .left-content{
   width: 600px ;
   height: 400px;
-  
+
 }
 .main-banner .right-content{
 
   width:400px;
-  
-  
+
+
 }
 
 
 
-/* 
+/*
 
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 
